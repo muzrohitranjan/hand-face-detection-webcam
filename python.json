@@ -1,0 +1,7 @@
+{
+  "1": "print(\"Hello from 1 finger\")",
+  "2": "for i in range(5):\n  print(i)",
+  "3": "def sum(a, b):\n  return a + b",
+  "4": "my_list = []",
+  "5": "try:\n  pass\nexcept Exception as e:\n  print(e)"
+}

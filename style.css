@@ -1,0 +1,84 @@
+/* Reset & global settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Video and canvas full screen */
+video, canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay container */
+#overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px 18px;
+  border-radius: 10px;
+  z-index: 2;
+  font-size: 15px;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+}
+
+/* Overlay text styles */
+#overlay p {
+  margin: 6px 0;
+}
+
+/* Theme toggle button */
+#themeToggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  background-color: #ffffffcc;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+#themeToggle:hover {
+  background-color: #ddd;
+}
+
+/* Light mode styles */
+body.light {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+body.light #overlay {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+body.light #themeToggle {
+  background-color: #222;
+  color: #fff;
+}

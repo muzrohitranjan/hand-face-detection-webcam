@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Tracking with Canvas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video id="video" autoplay playsinline muted aria-label="Camera feed for hand and eye tracking"></video>
+  <canvas id="canvas" aria-label="Canvas overlay for drawing landmarks"></canvas>
+
+  <div id="overlay" role="region" aria-live="polite">
+    <p id="fps">FPS: --</p>
+    <p id="handCount">Hands: --</p>
+  </div>
+  <button id="themeToggle" aria-label="Toggle between light and dark theme">Toggle Theme</button>
+
+  <!-- MediaPipe Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/facemesh/facemesh.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
